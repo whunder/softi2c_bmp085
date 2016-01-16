@@ -2,7 +2,7 @@ Arduino SoftI2C_BMP085 library
 ==============================
 
 Modified Adafruit_BMP085 library which uses
-digital pins for I2C using the SoftI2CMaster library.
+digital pins for I2C using the SoftI2CMaster library.  
 Requires SoftI2CMaster Arduino library.
 
 Example usage:
@@ -27,6 +27,6 @@ Example usage:
 	  delay(500);
 	}
 
-Written by Daniel Lima for Biofeedback Analysis Ltd (2016).
-Original Adafruit library written by Limor Fried/Ladyada for Adafruit Industries.
+Written by Daniel Lima for Biofeedback Analysis Ltd (2016).  
+Original Adafruit library written by Limor Fried/Ladyada for Adafruit Industries.  
 BSD license, all text above must be included in any redistribution
