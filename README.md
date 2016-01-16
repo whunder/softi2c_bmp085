@@ -1,4 +1,4 @@
-Arduino SoftI2C_BMP085 library
+SoftI2C_BMP085 Arduino library
 ==============================
 
 Modified Adafruit_BMP085 library which uses

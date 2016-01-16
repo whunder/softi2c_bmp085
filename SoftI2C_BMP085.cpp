@@ -1,4 +1,4 @@
-/* Arduino SoftI2C_BMP085 library.
+/* SoftI2C_BMP085 Arduino library.
  *
  * Written by Daniel Lima for Biofeedback Analysis Ltd (2016).
  * Original Adafruit library written by Limor Fried/Ladyada for Adafruit Industries.
@@ -230,6 +230,7 @@ uint8_t SoftI2C_BMP085::read8(uint8_t a) {
   i2c_write(a);
   i2c_rep_start(BMP085_I2CADDR | I2C_READ);
   ret = i2c_read(true);
+  i2c_stop();
 
   return ret;
 }
@@ -243,8 +244,8 @@ uint16_t SoftI2C_BMP085::read16(uint8_t a) {
   ret = i2c_read(false);
   ret <<= 8;
   ret |= i2c_read(true);
-
   i2c_stop();
+  
   return ret;
 }
 
