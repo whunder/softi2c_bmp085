@@ -1,29 +1,31 @@
-SoftI2C_BMP085 Arduino library
+Software I2C BMP085 Arduino library
 ==============================
 
 Modified Adafruit_BMP085 library which uses
 digital pins for I2C using the SoftI2CMaster library.  
 Requires SoftI2CMaster Arduino library.
 
-Example usage:
+It's a drop-in replacement for the Adafruit Library, see an example:
 
 	#define SDA_PIN  2
-	#define SDA_PORT PORTB
+	#define SDA_PORT PORTD
 	#define SCL_PIN  3
-	#define SCL_PORT PORTB
+	#define SCL_PORT PORTD
 	#include <SoftI2C_BMP085.h>
-
+	
 	SoftI2C_BMP085 bmp;
-
+	
 	setup() {
-	  Serial.begin();
+	  Serial.begin(9600);
 	}
-
+	
 	loop() {
-	  bmp.begin();
-	  Serial.print("Temperature: ");
-	  Serial.print(bmp.ReadTemperature());
-	  Serial.print("\n");
+	  if (!bmp.begin()) {
+	    Serial.println("Sensor not found!");
+	  } else {
+	    Serial.print("Temperature: ");
+	    Serial.println(bmp.ReadTemperature());
+	  }
 	  delay(500);
 	}
 
