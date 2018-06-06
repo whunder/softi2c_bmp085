@@ -1,7 +1,7 @@
-#define SDA_PIN  2
-#define SDA_PORT PORTD
-#define SCL_PIN  3
-#define SCL_PORT PORTD
+#define SDA_PIN  0
+#define SDA_PORT PORTF
+#define SCL_PIN  1
+#define SCL_PORT PORTF
 #include <SoftI2C_BMP085.h>
 
 SoftI2C_BMP085 bmp;
