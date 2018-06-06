@@ -6,16 +6,16 @@
 
 SoftI2C_BMP085 bmp;
 
-setup() {
+void setup() {
   Serial.begin(9600);
 }
 
-loop() {
+void loop() {
   if (!bmp.begin()) {
     Serial.println("Sensor not found!");
   } else {
     Serial.print("Temperature: ");
-    Serial.println(bmp.ReadTemperature());
+    Serial.println(bmp.readTemperature());
   }
   delay(500);
 }
