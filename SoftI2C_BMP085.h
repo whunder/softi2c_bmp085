@@ -21,7 +21,7 @@
 
 #define BMP085_DEBUG 0
 
-#define BMP085_I2CADDR 0xEE
+#define BMP085_I2CADDR 0x77
 
 #define BMP085_ULTRALOWPOWER 0
 #define BMP085_STANDARD      1
